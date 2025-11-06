@@ -1,4 +1,82 @@
 import { FiZap } from "react-icons/fi";
+import { TbLayoutDashboard } from "react-icons/tb";
+import { BsBarChartLineFill } from "react-icons/bs";
+import { LuUsersRound } from "react-icons/lu";
+import { MdOutlineShoppingBag } from "react-icons/md";
+import { GoPackage } from "react-icons/go";
+import { MessageSquareText } from 'lucide-react';
+import { SlCalender } from "react-icons/sl";
+import { FiFileText } from "react-icons/fi";
+import { CiSettings } from "react-icons/ci";
+
+
+const menuItems =[
+{ 
+   id: 'dashboard',
+    icon:<TbLayoutDashboard />,
+    label: 'Dashboard',
+    active: true,
+    badge: 'New'
+},
+{
+    id: 'analytics',
+    icon: <BsBarChartLineFill />,
+    label: 'Analytics',
+    submenu:[
+        {id: 'overview', label: 'Overview'},
+        {id: 'reports', label:'Reports'},
+        {id: 'insights', label: 'Insihgts'}
+    ]
+},
+{
+    id: 'users',
+    icon: <LuUsersRound />,
+    label: 'Users',
+    count: '2.4k',
+    submenu:[
+     {id: 'all-users', label:'All Users'},
+     {id: 'roles', label: 'Role & Permissions'},
+     {id: 'activity', label: 'User Activity'}
+    ]
+},
+{
+    id: 'ecommerce',
+    icon: <MdOutlineShoppingBag />,
+    label: 'E-commerce',
+    submenu: [
+     { id: 'products', label: 'Products'},
+     { id: 'orders', label: 'Orders'},
+     { id: 'customers', label: 'Customers'},
+    ]
+},
+{
+    id: 'inventory',
+    icon: <GoPackage />,
+    label: 'Inventory',
+    count: '847'
+},
+{
+    id: 'transactions',
+    icon:   <MessageSquareText />,
+    label: 'Messages',
+    badge: '12'
+},
+{
+    id: 'calender',
+    icon: <SlCalender /> ,
+    label: 'Calendar'
+},
+{
+    id: 'reports',
+    icon: <FiFileText /> ,
+    label: 'Reports'
+},
+{
+   id: 'settings',
+   icon: <CiSettings /> ,
+
+}
+]
 
 const Sidebar = () => {
     return (

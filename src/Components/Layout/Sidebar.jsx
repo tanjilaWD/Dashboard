@@ -74,15 +74,16 @@ const menuItems =[
 {
    id: 'settings',
    icon: <CiSettings /> ,
+   label: 'Setting'
 
 }
-]
+];
 
 const Sidebar = () => {
     return (
-<div className="transition duration-300 ease-in-out bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-r border-slate-200/50 dark:border-slate-700/50 flex flex-col relative z-10">
+<div className="w-72 transition duration-300 ease-in-out bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-r border-slate-200/50 dark:border-slate-700/50 flex flex-col relative z-10">
 {/* logo */}
-<div className="p-6 border-b border-slate-200/50 dark:border-slate-700/">
+<div className="p-6 border-b border-slate-200/50 dark:border-slate-700/50">
 <div className="flex items-center space-x-3">
 <div className="size-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
 <FiZap className="size-6 text-white"/>
@@ -96,12 +97,24 @@ const Sidebar = () => {
 </div>
 </div>
 {/* Navigation I will display Dynamic Menus */}
-<nav className="flex-1 p-4 space-y-2 overflow-y-auto"></nav>
+<nav className="flex-1 p-4 space-y-2 overflow-y-auto">
+{menuItems.map((item)=>{
+return(
+<div key={item.id}>
+<button className={`w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200`}>
+<div className="flex items-center space-x-3"> 
+    {item.icon }
+</div>
+</button>
+</div>
+);
+})}
+</nav>
 {/* user Profile */}
 <div className="p-4 border-t border-slate-200/50 dark:border-slate-700/50">
 <div className="flex items-center space-x-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
 <img
-src="https://scontent.fdac155-1.fna.fbcdn.net/v/t39.30808-6/562370229_1197787835496438_7853508759030175869_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=MEv0xuNPFRcQ7kNvwEuqys5&_nc_oc=Adm3jJybuHekwYUjj-VmzYZgUkHMsdK51jUW4kCNVfc88_c522qJlIwTyU2ntIJCLi0&_nc_zt=23&_nc_ht=scontent.fdac155-1.fna&_nc_gid=gecaoIrG63oBe9sFadK8Lg&oh=00_Afj4dWJGe1lgB5Imn-PNB073anfFIXpcxT1zCGiG5OiHkg&oe=690E2E4A"
+src="/profile.jpg"
 alt="user" 
 className="size-10 rounded-full ring-2 ring-blue-500"
 />

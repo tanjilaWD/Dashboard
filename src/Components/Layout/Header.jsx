@@ -53,7 +53,7 @@ return (
 {/* user profile */}
 <div className="flex items-center space-x-3 pl-3 border-l border-slate-200 dark:border-slate-700">
 <img 
-src="https://scontent.fdac155-1.fna.fbcdn.net/v/t39.30808-6/562370229_1197787835496438_7853508759030175869_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=MEv0xuNPFRcQ7kNvwEuqys5&_nc_oc=Adm3jJybuHekwYUjj-VmzYZgUkHMsdK51jUW4kCNVfc88_c522qJlIwTyU2ntIJCLi0&_nc_zt=23&_nc_ht=scontent.fdac155-1.fna&_nc_gid=gecaoIrG63oBe9sFadK8Lg&oh=00_Afj4dWJGe1lgB5Imn-PNB073anfFIXpcxT1zCGiG5OiHkg&oe=690E2E4A" 
+src="/profile.jpg" 
 alt="User"
 className="size-8 rounded-full ring-2 ring-blue-500"
 />
